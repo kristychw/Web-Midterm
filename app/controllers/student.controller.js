@@ -26,7 +26,7 @@ exports.create = (req,res)=>{
         .then(data => res.send(data))
         .catch(err =>{
             res.status(500).send({
-                'message':"something went wrong while inserting data!",
+                'message':"Something went wrong while inserting data!",
                 'error': err
             })
 
@@ -106,10 +106,6 @@ exports.findOne = (req, res) => {
         }
     )
 }
-
-
-
-
 
 exports.delete = (req, res) =>{
     const id = req.params.id

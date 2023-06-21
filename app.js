@@ -19,7 +19,7 @@ mongoose.connect(dbConfig.url, {
     console.log('DB is connected!');
 
 }).catch(err=>{
-    console.log('DB not connected!!',err);
+    console.log('DB is NOT connected!! Please check!', err);
     process.exit();
 })
 
@@ -33,5 +33,5 @@ app.get('/',(req, res)=>{
 require('./app/routes/student.route')(app);
 
 app.listen(4000, ()=>{
-    console.log('Server is working');
+    console.log('Server is working!!');
 })
